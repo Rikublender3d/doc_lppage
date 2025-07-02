@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-bg {
+  /* 現在の色を青系のグラデーションに置き換える */
+  background: linear-gradient(to right, #4a90e2, #6aaee7);
+  /* 例: 青から明るい青へ */
+  /* または、より深みのある青 */
+  /* background: linear-gradient(to right, #1a237e, #283593); */
+}
+
+/* 価格プランのハイライトがある場合 */
+.price-highlight {
+  background-color: #3b82f6;
+  /* Tailwindのblue-500に近い色 */
+}
+
+.price-highlight:hover {
+  background-color: #2563eb;
+  /* Tailwindのblue-600に近い色 */
+}
