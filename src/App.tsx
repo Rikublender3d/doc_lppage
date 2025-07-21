@@ -30,25 +30,25 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
+      <section className="relative h-[75vh] md:h-[80vh] overflow-hidden">
         <div className="absolute inset-0 bg-gray-900">
           <img src={Image} alt="歯科ドック総合検診" className="h-full w-full object-cover opacity-40" />
         </div>
-        <div className="relative h-full flex flex-col justify-center items-center text-white text-center px-4 lg:px-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        <div className="relative h-full md:py-6 py-3 flex flex-col justify-end  items-center text-white text-center px-4 lg:px-16">
+          <h1 className="text-4xl md:text-5xl font-bold md:mb-6 mb-3 leading-tight">
             歯科ドック総合検診で<br />
             <span className="text-amber-300">健康な歯を一生守る</span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl leading-relaxed opacity-90">
+          <p className="text-lg md:text-xl md:mb-8 mb-4 max-w-2xl leading-relaxed opacity-90">
             歯周病や歯の疾患が多い50代の方へ<br />
             予防歯科の専門家が、あなたの口腔健康を総合的にサポートします。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <button className="flex items-center justify-center bg-amber-400 text-gray-900 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-amber-300 transition duration-300">
+            <button className="flex items-center justify-center bg-amber-400 text-gray-900 px-6 md:py-3 py-2 rounded-lg text-lg font-semibold hover:bg-amber-300 transition duration-300">
               <FaCalendarCheck className="mr-2" />
               WEB予約
             </button>
-            <button className="flex items-center justify-center border-2 border-white text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition duration-300">
+            <button className="flex items-center justify-center border-2 border-white text-white  px-6 md:py-3 py-2 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition duration-300">
               <FaPlayCircle className="mr-2" />
               検診内容を見る
             </button>
