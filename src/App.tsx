@@ -47,10 +47,10 @@ function App() {
               <FaCalendarCheck className="mr-2" />
               WEB予約
             </a>
-            <button className="flex items-center justify-center border-2 border-white text-white  px-6 md:py-3 py-2 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition duration-300">
+            <a href="#kenshin" className="flex items-center justify-center border-2 border-white text-white px-6 md:py-3 py-2 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition duration-300">
               <FaPlayCircle className="mr-2" />
               検診内容を見る
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -223,7 +223,7 @@ function App() {
       </section>
 
       {/* 検査項目 */}
-      <section className="py-16 bg-slate-50">
+      <section id="kenshin" className="py-16 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-700 mb-4">歯科ドック検査項目</h2>
