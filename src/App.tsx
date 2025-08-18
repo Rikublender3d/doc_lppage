@@ -2,7 +2,7 @@ import Image from "./assets/aa.jpg";
 import {
   FaTooth, FaPhone, FaCalendarAlt, FaCalendarCheck, FaPlayCircle,
   FaMicroscope, FaShieldAlt, FaHeartbeat, FaBacteria, FaChartLine, FaFileMedicalAlt,
-  FaCheck, FaEnvelope, FaMapMarkerAlt
+  FaCheck, FaMapMarkerAlt
 } from 'react-icons/fa';
 
 function App() {
