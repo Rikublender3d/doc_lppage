@@ -474,7 +474,8 @@ function App() {
                 <div className="text-center">
                   <FaPhone className="text-4xl mb-4" /> {/* <i /> から FaPhone に変更 */}
                   <h3 className="text-2xl font-semibold mb-4">お電話でのご予約</h3>
-                  <p className="mb-6">平日 9:00-13:00 / 14:30-20:00</p>
+                  <p className="mb-2">月〜金 10:00-14:00 / 15:00-20:00</p>
+                  <p className="mb-6">第1土曜 10:00-14:00 / 15:00-20:00</p>
                   <a href="tel:03-6457-7188" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-xl font-semibold transition duration-300 inline-block">
                     03-6457-7188
                   </a>
@@ -535,9 +536,9 @@ function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4">診療時間</h4>
               <div className="space-y-2 text-gray-400">
-                <p>月〜土：10:00-14:00 / 15:00-20:00</p>
-                <p>日曜：10:00-14:00 / 15:00-20:00</p>
-                <p>休診：祝日・偶数週日曜日</p>
+                <p>月〜金：10:00-14:00 / 15:00-20:00</p>
+                <p>第1土曜：10:00-14:00 / 15:00-20:00</p>
+                <p>休診：日曜・祝日・第1以外の土曜</p>
               </div>
             </div>
 
