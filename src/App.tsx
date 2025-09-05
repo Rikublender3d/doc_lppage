@@ -4,6 +4,8 @@ import {
   FaMicroscope, FaShieldAlt, FaHeartbeat, FaBacteria, FaChartLine, FaFileMedicalAlt,
   FaCheck, FaMapMarkerAlt
 } from 'react-icons/fa';
+import recommend1 from './assets/recommend1.png';
+import recommend2 from './assets/recommend2.png';
 
 function App() {
   return (
@@ -12,15 +14,15 @@ function App() {
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
           <div className="flex items-center">
-            <FaTooth className="text-3xl text-blue-600 mr-3" />
+            <FaTooth className="text-3xl text-[#2c5aa0] mr-3" />
             <h1 className="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap">歯科ドック総合検診</h1>
           </div>
           <div className="flex items-center space-x-2 sm:space-x-4">
-            <a href="tel:03-6457-7188" className="flex items-center bg-blue-600 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg hover:bg-blue-700 transition duration-300 whitespace-nowrap text-sm">
+            <a href="tel:03-6457-7188" className="flex items-center bg-[#2c5aa0] text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg hover:bg-[#1e3f73] transition duration-300 whitespace-nowrap text-sm">
               <FaPhone className="mx-1 my-1" />
               <span className="hidden sm:inline">03-6457-7188</span>
             </a>
-            <a href="https://clinics-app.com/dental/06cb0916-ca56-4284-b963-447a34e5286f" className="flex items-center bg-blue-500 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg hover:bg-blue-600 transition duration-300 whitespace-nowrap text-sm">
+            <a href="https://clinics-app.com/dental/06cb0916-ca56-4284-b963-447a34e5286f" className="flex items-center bg-[#cfcba9] text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg hover:bg-[#b8b38a] transition duration-300 whitespace-nowrap text-sm">
               <FaCalendarAlt className="mx-1 my-1" />
               <span className="hidden sm:inline">WEB予約</span>
             </a>
@@ -39,7 +41,7 @@ function App() {
             <span className="text-amber-300">健康な歯を一生守る</span>
           </h1>
           <p className="text-lg md:text-xl md:mb-8 mb-4 max-w-2xl leading-relaxed opacity-90">
-            歯周病や歯の疾患が多い50代の方へ<br />
+            歯周病や歯の疾患が多い40,50代の方へ<br />
             予防歯科の専門家が、あなたの口腔健康を総合的にサポートします。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
@@ -67,7 +69,7 @@ function App() {
               { title: "口臭が気になる", desc: "人との会話で口臭が気になり、自信を持って話せない" },
               { title: "歯茎の健康が心配", desc: "歯茎から血が出たり、腫れたりして歯周病が進行していないか不安" }
             ].map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-400">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-md ">
                 <div className="flex items-start">
                   <div className="text-2xl mr-4 text-blue-600">✓</div>
                   <div>
@@ -99,8 +101,8 @@ function App() {
             ].map((feature, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <feature.icon className="text-2xl text-blue-600" />
+                  <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center mx-auto mb-6">
+                    <feature.icon className="text-2xl text-[#2c5aa0]" />
                   </div>
                   <h3 className="text-lg font-semibold mb-4 text-gray-700">{feature.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
@@ -112,12 +114,12 @@ function App() {
       </section>
 
       {/* 担当Dr.からの一言 */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-emerald-50">
+      <section className="py-16 bg-gradient-to-br from-[#e8f2ff] to-[#f0f8ff]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg border border-gray-100">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-700 mb-4">担当Dr.からの一言</h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto"></div>
+              <div className="w-20 h-1 bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] mx-auto"></div>
             </div>
             <div className="text-gray-600 leading-relaxed space-y-4 text-sm md:text-base">
               <p>
@@ -144,27 +146,26 @@ function App() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-700 mb-4">こんな方におすすめ！</h2>
             <p className="text-lg text-gray-600">一つでも当てはまる方は、歯科ドック検診をご検討ください</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* 左側の写真 */}
-            <div className="bg-blue-50 rounded-xl p-6 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FaTooth className="text-3xl text-blue-600" />
+            <div className="bg-[#e8f2ff] rounded-xl">
+              <div className="mb-4 text-center">
+                <img src={recommend1} alt="予防を重視したい方" className="rounded-t-lg w-full h-72 object-top object-cover" />
+                <div className="p-3">
+                  <h3 className="text-lg font-semibold text-[#2c5aa0] mb-2 mt-1">予防を重視したい方</h3>
+                  <p className="text-sm text-[#2c5aa0]">痛くなる前に健康な歯を守りたい方</p>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-700 mb-2">予防を重視したい方</h3>
-                <p className="text-sm text-gray-600">痛くなる前に健康な歯を守りたい方</p>
               </div>
             </div>
 
             {/* 右側の写真 */}
-            <div className="bg-blue-100 rounded-xl p-6 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-blue-300 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FaHeartbeat className="text-3xl text-blue-700" />
+            <div className="bg-[#e8f2ff] rounded-xl">
+              <div className="mb-4 text-center">
+                <img src={recommend2} alt="健康管理をしたい方" className="rounded-t-lg w-full h-72 object-top object-cover" />
+                <div className="p-3">
+                  <h3 className="text-lg font-semibold text-[#2c5aa0] mb-2 mt-1">健康管理をしたい方</h3>
+                  <p className="text-sm text-[#2c5aa0]">口腔の健康状態を詳しく知りたい方</p>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-700 mb-2">健康管理をしたい方</h3>
-                <p className="text-sm text-gray-600">口腔の健康状態を詳しく知りたい方</p>
               </div>
             </div>
           </div>
@@ -197,23 +198,23 @@ function App() {
               </ul>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <FaCheck className="text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                  <FaCheck className="text-[#2c5aa0] mt-1 mr-3 flex-shrink-0" />
                   <span className="text-gray-700">歯ブラシしていて血が出る</span>
                 </li>
                 <li className="flex items-start">
-                  <FaCheck className="text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                  <FaCheck className="text-[#2c5aa0] mt-1 mr-3 flex-shrink-0" />
                   <span className="text-gray-700">噛み合わせが気になる</span>
                 </li>
                 <li className="flex items-start">
-                  <FaCheck className="text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                  <FaCheck className="text-[#2c5aa0] mt-1 mr-3 flex-shrink-0" />
                   <span className="text-gray-700">歯の色が気になる</span>
                 </li>
                 <li className="flex items-start">
-                  <FaCheck className="text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                  <FaCheck className="text-[#2c5aa0] mt-1 mr-3 flex-shrink-0" />
                   <span className="text-gray-700">歯がしみる</span>
                 </li>
                 <li className="flex items-start">
-                  <FaCheck className="text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                  <FaCheck className="text-[#2c5aa0] mt-1 mr-3 flex-shrink-0" />
                   <span className="text-gray-700">歯ブラシしているのに虫歯ができる</span>
                 </li>
               </ul>
@@ -232,7 +233,7 @@ function App() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-              <h3 className="text-xl font-semibold mb-6 text-blue-600">基本検査項目</h3>
+              <h3 className="text-xl font-semibold mb-6 text-[#2c5aa0]">基本検査項目</h3>
               <div className="space-y-4">
                 {[
                   { title: "口腔内診査", desc: "視診・触診による口腔内全体の詳細チェック" },
@@ -241,7 +242,7 @@ function App() {
                   { title: "口腔内写真撮影", desc: "高解像度口腔内カメラによる詳細記録" }
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
-                    <FaCheck className="text-blue-600 mt-1 mr-3 flex-shrink-0" />
+                    <FaCheck className="text-[#2c5aa0] mt-1 mr-3 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-700 text-sm">{item.title}</h4>
                       <p className="text-gray-600 text-xs mt-1">{item.desc}</p>
@@ -252,10 +253,10 @@ function App() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-              <h3 className="text-xl font-semibold mb-6 text-blue-500">特殊検査項目</h3>
+              <h3 className="text-xl font-semibold mb-6 text-[#2c5aa0]">特殊検査項目</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <FaCheck className="text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                  <FaCheck className="text-[#2c5aa0] mt-1 mr-3 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-gray-700 text-sm">唾液検査</h4>
                     <p className="text-gray-600 text-xs mt-1">歯の健康、歯ぐきの健康、口腔清潔度に分けて虫歯菌、唾液酸性度、唾液緩衝能、白血球数、たんぱく質量、アンモニア量の６項目を分類して検査しています</p>
@@ -267,7 +268,7 @@ function App() {
                   { title: "咬合検査", desc: "かむ力を総合的に分析し、噛み合わせについて確認を行なっています。" }
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
-                    <FaCheck className="text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                    <FaCheck className="text-[#2c5aa0] mt-1 mr-3 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-700 text-sm">{item.title}</h4>
                       <p className="text-gray-600 text-xs mt-1">{item.desc}</p>
@@ -292,7 +293,7 @@ function App() {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-gradient-to-r from-blue-600 to-blue-500 text-white">
+                  <tr className="bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] text-white">
                     <th className="px-4 py-3 text-left font-semibold text-sm">検査項目</th>
                     <th className="px-4 py-3 text-center font-semibold text-sm">従来の定期検診</th>
                     <th className="px-4 py-3 text-center font-semibold text-sm">歯科ドック総合検診</th>
@@ -312,7 +313,7 @@ function App() {
                       <td className="px-4 py-3 font-semibold text-gray-700">{row.item}</td>
                       <td className="px-4 py-3 text-center text-gray-600">{row.conventional}</td>
                       <td className="px-4 py-3 text-center">
-                        <span className="font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded">
+                        <span className="font-semibold text-[#2c5aa0] bg-[#e8f2ff] px-2 py-1 rounded">
                           {row.dental}
                         </span>
                       </td>
@@ -337,16 +338,16 @@ function App() {
             {[
               { name: "スタンダード", price: "¥15,000", tax: "(税込16,500円)", features: ["基本検査"], color: "blue", popular: false },
               { name: "プレミアム", price: "¥25,000", tax: "(税込27,500円)", features: ["基本検査", "特殊検査"], color: "blue", popular: true },
-              { name: "コンプリート", price: "¥35,000", tax: "(税込38,500円)", features: ["基本検査", "特殊検査", "パウダークリーニング"], color: "purple", popular: false }
+              { name: "コンプリート", price: "¥35,000", tax: "(税込38,500円)", features: ["基本検査", "特殊検査", "パウダークリーニング"], color: "gold", popular: false }
             ].map((plan, index) => (
-              <div key={index} className={`bg-white p-6 rounded-xl shadow-lg border relative ${plan.popular ? 'border-blue-400 border-2' : 'border-gray-100'}`}>
+              <div key={index} className={`bg-white p-6 rounded-xl shadow-lg border relative ${plan.popular ? 'border-[#cfcba9] border-2' : 'border-gray-100'}`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-400 text-white px-3 py-1 rounded-full text-xs font-semibold">人気No.1</span>
+                    <span className="bg-[#cfcba9] text-white px-3 py-1 rounded-full text-xs font-semibold">人気No.1</span>
                   </div>
                 )}
                 <div className="text-center">
-                  <h3 className={`text-xl font-semibold mb-4 ${plan.color === 'blue' ? 'text-blue-600' : 'text-purple-600'}`}>
+                  <h3 className={`text-xl font-semibold mb-4 ${plan.color === 'blue' ? 'text-[#2c5aa0]' : plan.color === 'gold' ? 'text-[#b8860b]' : 'text-purple-600'}`}>
                     {plan.name}
                   </h3>
                   <div className="mb-6">
@@ -356,13 +357,13 @@ function App() {
                   <ul className="space-y-2 text-left mb-6">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm">
-                        <FaCheck className={`mr-2 ${plan.color === 'blue' ? 'text-blue-600' : 'text-purple-600'}`} />
+                        <FaCheck className={`mr-2 ${plan.color === 'blue' ? 'text-[#2c5aa0]' : plan.color === 'gold' ? 'text-[#b8860b]' : 'text-purple-600'}`} />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <a href="https://clinics-app.com/dental/06cb0916-ca56-4284-b963-447a34e5286f" className={`w-full text-white py-3 rounded-lg transition duration-300 text-sm font-semibold inline-block text-center ${plan.color === 'blue' ? 'bg-blue-600 hover:bg-blue-700' :
-                    'bg-purple-600 hover:bg-purple-700'
+                  <a href="https://clinics-app.com/dental/06cb0916-ca56-4284-b963-447a34e5286f" className={`w-full py-3 rounded-lg transition duration-300 text-sm font-semibold inline-block text-center ${plan.color === 'blue' ? 'bg-[#2c5aa0] hover:bg-[#1e3f73] text-white' : plan.color === 'gold' ? 'bg-[#daa520] hover:bg-[#b8860b] text-white' :
+                    'bg-purple-600 hover:bg-purple-700 text-white'
                     }`}>
                     このプランを選択
                   </a>
@@ -388,8 +389,8 @@ function App() {
           <div className="space-y-12">
             <div className="flex items-center space-x-8">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-2xl font-bold text-blue-600">01</span>
+                <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center">
+                  <span className="text-2xl font-bold text-[#2c5aa0]">01</span>
                 </div>
               </div>
               <div className="flex-1">
@@ -406,8 +407,8 @@ function App() {
 
             <div className="flex items-center space-x-8">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-2xl font-bold text-blue-600">02</span>
+                <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center">
+                  <span className="text-2xl font-bold text-[#2c5aa0]">02</span>
                 </div>
               </div>
               <div className="flex-1">
@@ -424,8 +425,8 @@ function App() {
 
             <div className="flex items-center space-x-8">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-2xl font-bold text-blue-600">03</span>
+                <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center">
+                  <span className="text-2xl font-bold text-[#2c5aa0]">03</span>
                 </div>
               </div>
               <div className="flex-1">
@@ -442,8 +443,8 @@ function App() {
 
             <div className="flex items-center space-x-8">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-2xl font-bold text-blue-600">04</span>
+                <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center">
+                  <span className="text-2xl font-bold text-[#2c5aa0]">04</span>
                 </div>
               </div>
               <div className="flex-1">
@@ -476,7 +477,7 @@ function App() {
                   <h3 className="text-2xl font-semibold mb-4">お電話でのご予約</h3>
                   <p className="mb-2">月〜金 10:00-14:00 / 15:00-20:00</p>
                   <p className="mb-6">第1土曜 10:00-14:00 / 15:00-20:00</p>
-                  <a href="tel:03-6457-7188" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-xl font-semibold transition duration-300 inline-block">
+                  <a href="tel:03-6457-7188" className="bg-[#2c5aa0] hover:bg-[#1e3f73] text-white px-8 py-4 rounded-lg text-xl font-semibold transition duration-300 inline-block">
                     03-6457-7188
                   </a>
                 </div>
@@ -487,7 +488,7 @@ function App() {
                   <FaCalendarAlt className="text-4xl mb-4" /> {/* <i /> から FaCalendarAlt に変更 */}
                   <h3 className="text-2xl font-semibold mb-4">WEB予約</h3>
                   <p className="mb-6">24時間いつでもご予約可能</p>
-                  <a href="https://clinics-app.com/dental/06cb0916-ca56-4284-b963-447a34e5286f" className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-lg text-xl font-semibold transition duration-300 inline-block">
+                  <a href="https://clinics-app.com/dental/06cb0916-ca56-4284-b963-447a34e5286f" className="bg-[#cfcba9] hover:bg-[#b8b38a] text-white px-8 py-4 rounded-lg text-xl font-semibold transition duration-300 inline-block">
                     WEB予約はこちら
                   </a>
                 </div>
