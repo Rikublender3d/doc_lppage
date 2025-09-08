@@ -87,17 +87,16 @@ function App() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-700 mb-4">歯科ドック総合検診の6つの特徴</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-700 mb-4">歯科ドック総合検診の5つの特徴</h2>
             <p className="text-lg text-gray-600">包括的な検査で口腔の健康状態を詳細に把握</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { icon: FaMicroscope, title: "最新検査機器による精密診断", desc: "デジタルレントゲン、口腔内カメラ、歯周病検査機器など最新技術を駆使し、従来の検査では発見困難な初期段階の疾患も早期発見できます。" },
-              { icon: FaShieldAlt, title: "包括的な口腔がんスクリーニング", desc: "口腔がんの早期発見に特化した特殊検査を実施。視診・触診に加え、蛍光観察装置を使用した精密なスクリーニングを行います。" },
-              { icon: FaHeartbeat, title: "歯周病リスク詳細評価", desc: "歯周ポケット測定、出血指数、動揺度検査など多角的な評価により、歯周病の進行度とリスクを正確に把握し、個別の予防プランを提案します。" },
-              { icon: FaBacteria, title: "口腔内細菌検査", desc: "唾液検査により虫歯菌・歯周病菌の数と活性度を測定。個人の口腔内環境に応じたオーダーメイドの予防プログラムを作成します。" },
-              { icon: FaChartLine, title: "咬合・顎関節機能検査", desc: "噛み合わせの状態や顎関節の動きを詳細に分析。TMJ（顎関節症）のリスク評価と機能改善のアドバイスを提供します。" },
-              { icon: FaFileMedicalAlt, title: "詳細レポート作成", desc: "検査結果を分かりやすくまとめた詳細レポートを作成。今後の予防プランと治療が必要な項目を明確に提示します。" }
+              { icon: FaMicroscope, title: "最新設備での検査", desc: "最新の医療機器と設備を使用した精密な検査を実施。従来の検査では発見できない細かな問題も早期に発見し、より正確な診断を提供します。" },
+              { icon: FaShieldAlt, title: "個室でプライバシー保護", desc: "完全個室での検査により、プライバシーを最大限に保護。リラックスした環境で安心して検査を受けていただけます。" },
+              { icon: FaHeartbeat, title: "しっかりした診療時間の確保", desc: "十分な時間をかけて丁寧に検査を実施。慌ただしい診療ではなく、一人ひとりにしっかりと向き合った診療を提供します。" },
+              { icon: FaBacteria, title: "検査後充実した資料のお渡し", desc: "検査結果を分かりやすくまとめた詳細な資料をお渡し。今後の予防プランと治療が必要な項目を明確に提示します。" },
+              { icon: FaChartLine, title: "詳しい説明と質問時間の確保", desc: "検査結果について詳しく説明し、ご質問にお答えする時間を十分に確保。疑問点を解消し、安心して治療に進んでいただけます。" }
             ].map((feature, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
                 <div className="text-center">
