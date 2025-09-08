@@ -6,6 +6,7 @@ import {
 } from 'react-icons/fa';
 import recommend1 from './assets/recommend1.webp';
 import recommend2 from './assets/recommend2.webp';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -590,6 +591,7 @@ function App() {
           </div>
         </div>
       </footer>
+      <Analytics />
     </div>);
 }
 
