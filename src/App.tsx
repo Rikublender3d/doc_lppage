@@ -1,7 +1,7 @@
 import Image from "./assets/aa.jpg";
 import {
   FaTooth, FaPhone, FaCalendarAlt, FaCalendarCheck, FaPlayCircle,
-  FaMicroscope, FaShieldAlt, FaHeartbeat, FaBacteria, FaChartLine, FaFileMedicalAlt,
+  FaMicroscope, FaShieldAlt, FaHeartbeat, FaBacteria, FaChartLine,
   FaCheck, FaMapMarkerAlt
 } from 'react-icons/fa';
 import recommend1 from './assets/recommend1.png';
