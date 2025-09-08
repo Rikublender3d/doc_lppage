@@ -1,11 +1,11 @@
-import Image from "./assets/aa.jpg";
+import Image from "./assets/aa.webp";
 import {
   FaTooth, FaPhone, FaCalendarAlt, FaCalendarCheck, FaPlayCircle,
   FaMicroscope, FaShieldAlt, FaHeartbeat, FaBacteria, FaChartLine,
   FaCheck, FaMapMarkerAlt
 } from 'react-icons/fa';
-import recommend1 from './assets/recommend1.png';
-import recommend2 from './assets/recommend2.png';
+import recommend1 from './assets/recommend1.webp';
+import recommend2 from './assets/recommend2.webp';
 
 function App() {
   return (
@@ -18,11 +18,11 @@ function App() {
             <h1 className="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap">歯科ドック総合検診</h1>
           </div>
           <div className="flex items-center space-x-2 sm:space-x-4">
-            <a href="tel:03-6457-7188" className="flex items-center bg-[#2c5aa0] text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg hover:bg-[#1e3f73] transition duration-300 whitespace-nowrap text-sm">
+            <a href="tel:03-6457-7188" className="flex items-center bg-[#2c5aa0] text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg hover:bg-[#1e3f73] transition duration-300 whitespace-nowrap text-sm" aria-label="電話で予約する 03-6457-7188">
               <FaPhone className="mx-1 my-1" />
               <span className="hidden sm:inline">03-6457-7188</span>
             </a>
-            <a href="https://clinics-app.com/dental/06cb0916-ca56-4284-b963-447a34e5286f" className="flex items-center bg-[#cfcba9] text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg hover:bg-[#b8b38a] transition duration-300 whitespace-nowrap text-sm">
+            <a href="https://clinics-app.com/dental/06cb0916-ca56-4284-b963-447a34e5286f" className="flex items-center bg-[#cfcba9] text-black px-3 py-2 sm:px-4 sm:py-2 rounded-lg hover:bg-[#b8b38a] transition duration-300 whitespace-nowrap text-sm" aria-label="WEB予約ページを開く">
               <FaCalendarAlt className="mx-1 my-1" />
               <span className="hidden sm:inline">WEB予約</span>
             </a>
@@ -33,7 +33,13 @@ function App() {
       {/* Hero Section */}
       <section className="relative h-[75vh] md:h-[80vh] overflow-hidden">
         <div className="absolute inset-0 bg-gray-900">
-          <img src={Image} alt="歯科ドック総合検診" className="h-full w-full object-cover opacity-40" />
+          <img
+            src={Image}
+            alt="歯科ドック総合検診"
+            className="h-full w-full object-cover opacity-40"
+            fetchPriority="high"
+            loading="eager"
+          />
         </div>
         <div className="relative h-full md:py-6 py-3 flex flex-col justify-end  items-center text-white text-center px-4 lg:px-16">
           <h1 className="text-4xl md:text-5xl font-bold md:mb-6 mb-3 leading-tight">
@@ -90,56 +96,50 @@ function App() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-700 mb-4">歯科ドック総合検診の5つの特徴</h2>
             <p className="text-lg text-gray-600">包括的な検査で口腔の健康状態を詳細に把握</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* 最初の3つの特徴 */}
-            <div className="md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center mx-auto mb-6">
-                    <FaMicroscope className="text-2xl text-[#2c5aa0]" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-4 text-gray-700">最新設備での検査</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">最新の医療機器と設備を使用した精密な検査を実施。従来の検査では発見できない細かな問題も早期に発見し、より正確な診断を提供します。</p>
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <FaMicroscope className="text-2xl text-[#2c5aa0]" />
                 </div>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center mx-auto mb-6">
-                    <FaShieldAlt className="text-2xl text-[#2c5aa0]" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-4 text-gray-700">個室でプライバシー保護</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">完全個室での検査により、プライバシーを最大限に保護。リラックスした環境で安心して検査を受けていただけます。</p>
-                </div>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center mx-auto mb-6">
-                    <FaHeartbeat className="text-2xl text-[#2c5aa0]" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-4 text-gray-700">しっかりした診療時間の確保</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">十分な時間をかけて丁寧に検査を実施。慌ただしい診療ではなく、一人ひとりにしっかりと向き合った診療を提供します。</p>
-                </div>
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">最新設備での検査</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">最新の医療機器と設備を使用した精密な検査を実施。従来の検査では発見できない細かな問題も早期に発見し、より正確な診断を提供します。</p>
               </div>
             </div>
-            {/* 残り2つの特徴 */}
-            <div className="md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center mx-auto mb-6">
-                    <FaBacteria className="text-2xl text-[#2c5aa0]" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-4 text-gray-700">検査後充実した資料のお渡し</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">検査結果を分かりやすくまとめた詳細な資料をお渡し。今後の予防プランと治療が必要な項目を明確に提示します。</p>
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <FaShieldAlt className="text-2xl text-[#2c5aa0]" />
                 </div>
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">個室でプライバシー保護</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">完全個室での検査により、プライバシーを最大限に保護。リラックスした環境で安心して検査を受けていただけます。</p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center mx-auto mb-6">
-                    <FaChartLine className="text-2xl text-[#2c5aa0]" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-4 text-gray-700">詳しい説明と質問時間の確保</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">検査結果について詳しく説明し、ご質問にお答えする時間を十分に確保。疑問点を解消し、安心して治療に進んでいただけます。</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <FaHeartbeat className="text-2xl text-[#2c5aa0]" />
                 </div>
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">しっかりした診療時間の確保</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">十分な時間をかけて丁寧に検査を実施。慌ただしい診療ではなく、一人ひとりにしっかりと向き合った診療を提供します。</p>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <FaBacteria className="text-2xl text-[#2c5aa0]" />
+                </div>
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">検査後充実した資料のお渡し</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">検査結果を分かりやすくまとめた詳細な資料をお渡し。今後の予防プランと治療が必要な項目を明確に提示します。</p>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-[#e8f2ff] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <FaChartLine className="text-2xl text-[#2c5aa0]" />
+                </div>
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">詳しい説明と質問時間の確保</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">検査結果について詳しく説明し、ご質問にお答えする時間を十分に確保。疑問点を解消し、安心して治療に進んでいただけます。</p>
               </div>
             </div>
           </div>
@@ -376,11 +376,11 @@ function App() {
               <div key={index} className={`bg-white p-6 rounded-xl shadow-lg border relative ${plan.popular ? 'border-[#cfcba9] border-2' : 'border-gray-100'}`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-[#cfcba9] text-white px-3 py-1 rounded-full text-xs font-semibold">人気No.1</span>
+                    <span className="bg-[#cfcba9] text-gray-800 px-3 py-1 rounded-full text-xs font-semibold">人気No.1</span>
                   </div>
                 )}
                 <div className="text-center">
-                  <h3 className={`text-xl font-semibold mb-4 ${plan.color === 'blue' ? 'text-[#2c5aa0]' : plan.color === 'gold' ? 'text-[#b8860b]' : 'text-purple-600'}`}>
+                  <h3 className={`text-xl font-semibold mb-4 ${plan.color === 'blue' ? 'text-[#2c5aa0]' : plan.color === 'gold' ? 'text-[#8b4513]' : 'text-purple-600'}`}>
                     {plan.name}
                   </h3>
                   <div className="mb-6">
@@ -390,12 +390,12 @@ function App() {
                   <ul className="space-y-2 text-left mb-6">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm">
-                        <FaCheck className={`mr-2 ${plan.color === 'blue' ? 'text-[#2c5aa0]' : plan.color === 'gold' ? 'text-[#b8860b]' : 'text-purple-600'}`} />
+                        <FaCheck className={`mr-2 ${plan.color === 'blue' ? 'text-[#2c5aa0]' : plan.color === 'gold' ? 'text-[#8b4513]' : 'text-purple-600'}`} />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <a href="https://clinics-app.com/dental/06cb0916-ca56-4284-b963-447a34e5286f" className={`w-full py-3 rounded-lg transition duration-300 text-sm font-semibold inline-block text-center ${plan.color === 'blue' ? 'bg-[#2c5aa0] hover:bg-[#1e3f73] text-white' : plan.color === 'gold' ? 'bg-[#daa520] hover:bg-[#b8860b] text-white' :
+                  <a href="https://clinics-app.com/dental/06cb0916-ca56-4284-b963-447a34e5286f" className={`w-full py-3 rounded-lg transition duration-300 text-sm font-semibold inline-block text-center ${plan.color === 'blue' ? 'bg-[#2c5aa0] hover:bg-[#1e3f73] text-white' : plan.color === 'gold' ? 'bg-[#8b4513] hover:bg-[#654321] text-white' :
                     'bg-purple-600 hover:bg-purple-700 text-white'
                     }`}>
                     このプランを選択
@@ -521,7 +521,7 @@ function App() {
                   <FaCalendarAlt className="text-4xl mb-4" /> {/* <i /> から FaCalendarAlt に変更 */}
                   <h3 className="text-2xl font-semibold mb-4">WEB予約</h3>
                   <p className="mb-6">24時間いつでもご予約可能</p>
-                  <a href="https://clinics-app.com/dental/06cb0916-ca56-4284-b963-447a34e5286f" className="bg-[#cfcba9] hover:bg-[#b8b38a] text-white px-8 py-4 rounded-lg text-xl font-semibold transition duration-300 inline-block">
+                  <a href="https://clinics-app.com/dental/06cb0916-ca56-4284-b963-447a34e5286f" className="bg-[#cfcba9] hover:bg-[#b8b38a] text-gray-800 px-8 py-4 rounded-lg text-xl font-semibold transition duration-300 inline-block">
                     WEB予約はこちら
                   </a>
                 </div>
